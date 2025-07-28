@@ -13,7 +13,7 @@ body {
         border: none;
         padding: 1rem 2rem;
         border-radius: 22px;
-        font-weight: 700;
+        font-weight: bold;
         font-family: 'Public Sans', sans-serif;
         cursor: pointer;
         transition: filter 0.2s ease;      
@@ -24,7 +24,6 @@ body {
         position: relative;
         z-index: 200;
         display: flex;
-        padding: 2rem;
         justify-content: space-between;
         align-items: center;
         background-color: white;
@@ -48,7 +47,7 @@ body {
         display: flex;
         flex-direction: column;
         height: 80vh;
-        margin-bottom: 7rem;
+        margin-bottom: 2.56rem;
 
         #bg-intro-mobile {
             position: absolute;
@@ -85,14 +84,16 @@ body {
 
 
         #request-invite-button-hero-small-screen {
+            padding: 0;
             width: 10rem;
+            height: 2.75rem;
             margin: 0 auto;
         }
     }
 
     #features-section {
         background-color: hsl(220, 16%, 96%);
-        padding: 4rem 2rem;
+        padding: 2.5rem 2rem;
         text-align: center;
 
         #features-header {
@@ -155,6 +156,7 @@ body {
             letter-spacing: 0.5px;
             color: hsl(233, 26%, 24%);
             margin-top: 0;
+            margin-bottom: 3rem;
         }
 
         .article-img {
