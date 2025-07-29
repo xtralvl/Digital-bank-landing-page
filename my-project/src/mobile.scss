@@ -1,9 +1,11 @@
 @media (max-width: 480px) {
 
+    @import './mixins.scss';
     
     #bg-intro-desktop {
         display: none;
     }
+
 
 body {
     box-sizing: border-box;
@@ -12,15 +14,7 @@ body {
     font-size: 12px;
 
     .request-invite-button {
-        background: linear-gradient(to right, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
-        color: white;
-        border: none;
-        padding: 1rem 2rem;
-        border-radius: 22px;
-        font-weight: bold;
-        font-family: 'Public Sans', sans-serif;
-        cursor: pointer;
-        transition: filter 0.2s ease;      
+        @include request-invite-button-styles;
       }
       
 
