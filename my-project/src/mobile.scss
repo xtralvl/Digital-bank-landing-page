@@ -84,14 +84,16 @@ body {
 
 
         #request-invite-button-hero-small-screen {
-            padding: 0;
             width: 10rem;
             height: 2.75rem;
             margin: 0 auto;
+            padding: 0.85rem 2rem 1rem 2rem;
         }
     }
 
     #features-section {
+        border: 1px solid red;
+        margin-top: 6rem;
         background-color: hsl(220, 16%, 96%);
         padding: 2.5rem 2rem;
         text-align: center;
