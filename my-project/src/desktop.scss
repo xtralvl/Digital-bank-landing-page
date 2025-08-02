@@ -1,19 +1,14 @@
 @use './mixins.scss' as *;
 
-@media (min-width: 481px) and (max-width: 600px) {
-    #request-invite-top {
-        display: none;
-    }
+@media (min-width: 1024px) {
     
-    #desktop-hero-in-one {
-        display: none;
-    }
 
-    #image-mockups-desktop {
-        display: none;
-    }
-
-    
+    html, body {
+            overflow-x: hidden !important;
+          
+          
+      }
+      
 
     
     #bg-intro-mobile {
@@ -21,10 +16,14 @@
     }
 
         body {
+        position: relative;
         box-sizing: border-box;
         padding: 0;
         margin: 0;
         font-size: 12px;
+
+
+        
 
     .request-invite-button {
         @include request-invite-button-styles;
@@ -32,91 +31,138 @@
       
 
     header {
+        border-bottom: 1px solid rgb(0, 0, 0, 0.1);
         position: relative;
         z-index: 200;
         display: flex;
+        padding: 1rem 8rem !important;
         justify-content: space-between;
         align-items: center;
         background-color: white;
-        padding: 1.5rem;
+        padding: 1rem 1.5rem;
 
         #hamburger-icon {
-            width: 1.5rem;
-            height: 0.6875rem;
+            display: none;
         }
 
         #header-logo {
             width: 9.5625rem;
         }
+
+        #header-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style: none;
+
+                li {
+                    padding: 0 1rem;
+                    font-size: 1rem;
+                    font-family: 'Public Sans', sans-serif;
+
+                }
+
+                a {
+                    color: hsl(233, 8%, 62%);
+                    text-decoration: none;
+
+                }
+            }
+        }
+
+        #request-invite-top {
+            display: flex;
+        }
     }
 
-    #header-nav {
-        display: none;
-    }
+    #image-mockups-desktop {
+        position: absolute;
+        display: block;
+        top: 15rem; // Or adjust depending on where vertically you want it
+        left: 86%;
+        transform: translateX(-50%);
+        width: 45rem; // Or whatever width fits nicely
+        z-index: 100;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+      }
 
+      main {
+        position: relative;
+        min-height: 100vh
+
+      }
+      
+                    
     #hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        text-align: left;
+        padding: 0;
+        height: 70vh;
 
         #hero-content {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
-            padding: 2rem;
-            text-align: center;
-            z-index: 1;
-          }
+            grid-column: 1;
+            grid-row: 1;
+            padding: 0 8rem !important;
+            text-align: left;
+            max-width: 500px; // Optional: limits text line length
+        }
 
-          #hero-images {
-            overflow: hidden;
+        #hero-images {
+            background-image: url(../public/assets/images/bg-intro-desktop.svg);
+            background-size: 60rem;
+            background-position: -3rem -12rem;
+            background-repeat: no-repeat;
+            grid-column: 2;
+            grid-row: 1;
+            
+    
+        }
+                
 
-            #bg-intro-desktop {
-                display: block;
-                width: 100%;
-                transform: translateY(-2rem); /* moves it upward */
-                transform: translateX(5rem); /* moves it upward */
-                margin-bottom: -6rem; /* pulls content below back up so layout remains balanced */
-            }
-        
-            #image-mockups {
-                transform: translateY(-36rem); /* moves it upward */
-                transform: translateX(6rem); /* moves it upward */
-                margin-top: -36rem; /* pulls content below back up so layout remains balanced */
-                display: block;
-                width: 80%;
-              }
-
-          }
-          
-
-          
+                              
         h1 {
+            display: block;
+            text-align: left;
             color: hsl(233, 26%, 24%);
             font-family: 'Public Sans', sans-serif;
-            font-size: 2.2rem;
-            text-align: center;
+            font-size: 3rem;
             font-weight: lighter;
             line-height: 120%;
             letter-spacing: 0.75px;
             margin-top: 1rem;
-            padding: 0 4rem;
+            margin-left: 0 !important;
+            padding: 0 3rem 0 0;
         }
 
         p {
             font-family: 'Public Sans', sans-serif;
+            text-align: left;
+            display: block;
             color: hsl(233, 8%, 62%);
-            text-align: center;
             margin: -0.5rem 0rem;
             font-weight: lighter;
             line-height: 115%;
-            font-size: 0.85rem;
-            padding: 0 5.5rem;
+            font-size: 1rem;
+            padding: 0 4rem 0 0;
         }
 
 
         #request-invite-button-hero-small-screen {
             display: block;
             width: 10rem;
-            margin: 2.5rem;
+            margin: 2.5rem 0;
             border-radius: 22px;
             background: linear-gradient(to right, hsl(136, 64%, 51%), hsl(192, 69%, 51%));
             color: white;
@@ -125,10 +171,13 @@
             border: none;
             cursor: pointer;
           }
+
               }
 
     #features-section {
-        margin-top: 1rem;
+        z-index: 1;
+        position: relative;
+        margin-top: 0;
         background-color: hsl(220, 16%, 96%);
         padding: 4rem 3rem 3rem 3rem;
         text-align: center;
@@ -142,6 +191,7 @@
             color: hsl(233, 26%, 24%);
             margin: 0;
             margin-bottom: 1rem;
+            margin-top: 2rem;
             grid-row: 1;
             grid-column: 1 / 3;
             padding: 0 1rem;
@@ -176,8 +226,6 @@
             }
     
         }
-
-
 
         .features-paragraph {
             font-family: 'Public Sans', sans-serif;
@@ -336,17 +384,7 @@
           }
     }
 
-
-
-
-
-
-
+}
 
 }
 
-
-
-
-
-}

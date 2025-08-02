@@ -1,8 +1,22 @@
 // the min width 750px and 900px can be found at the very bottom of this file!!
+@use './mixins.scss' as *;
+
+
 
 @media (min-width: 601px) {
 
-    @import './mixins.scss';
+    #image-mockups-desktop {
+        display: none;
+    }
+    
+    #request-invite-top {
+        display: none;
+    }
+    
+    #desktop-hero-in-one {
+        display: none;
+    }
+    
 
     
     #bg-intro-mobile {
@@ -327,6 +341,10 @@
 }
 
 @media (min-width: 750px) {
+    #request-invite-top {
+        display: none;
+    }
+    
 
     #hero-images {
         overflow: hidden;
@@ -353,6 +371,10 @@
 
 
 @media (min-width: 900px) {
+    #request-invite-top {
+        display: none;
+    }
+    
 
     #hero-images {
         overflow: hidden;

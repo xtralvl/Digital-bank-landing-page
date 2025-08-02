@@ -1,6 +1,21 @@
-@media (max-width: 480px) {
+@use './mixins.scss' as *;
 
-    @import './mixins.scss';
+
+
+@media (max-width: 480px) {
+    #request-invite-top {
+        display: none;
+    }
+
+    #image-mockups-desktop {
+        display: none;
+    }
+
+    
+    #desktop-hero-in-one {
+        display: none;
+    }
+    
     
     #bg-intro-desktop {
         display: none;
