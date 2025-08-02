@@ -1,6 +1,10 @@
 @use './mixins.scss' as *;
 
 @media (min-width: 1024px) {
+
+    #image-mockups {
+        display: none !important;
+    }
     
 
     html, body {
@@ -12,7 +16,7 @@
 
     
     #bg-intro-mobile {
-        display: none;
+        display: none !important;
     }
 
         body {
@@ -102,7 +106,7 @@
     #hero {
         position: relative;
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 50% 50%;
         text-align: left;
         padding: 0;
         height: 70vh;
@@ -122,7 +126,7 @@
         #hero-images {
             background-image: url(../public/assets/images/bg-intro-desktop.svg);
             background-size: 60rem;
-            background-position: -3rem -12rem;
+            background-position: -2.2rem -12rem;
             background-repeat: no-repeat;
             grid-column: 2;
             grid-row: 1;
