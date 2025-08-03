@@ -241,7 +241,7 @@ body {
             margin-bottom: 2rem;
           }
 
-          #footer-nav {
+          .footer-column {
 
             ul {
                 padding: 0;
@@ -254,6 +254,17 @@ body {
                 font-size: 0.875rem;
                 color: white;
                 list-style: none;
+
+                a {
+                    margin-bottom: 1rem;
+                    line-height: 115%;
+                    font-family: 'Public Sans', sans-serif;
+                    font-size: 0.875rem;
+                    color: white;
+                    text-decoration: none;
+    
+                    }
+                
             }
 
             #request-invite-bottom {
