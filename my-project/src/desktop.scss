@@ -2,6 +2,12 @@
 
 @media (min-width: 1024px) {
 
+    #small-screen-menu,
+    #small-screen-overlay {
+        display: none !important;
+
+    }
+
     #image-mockups {
         display: none !important;
     }
@@ -40,7 +46,7 @@
     header {
         border-bottom: 1px solid rgb(0, 0, 0, 0.1);
         position: relative;
-        z-index: 200;
+        z-index: 4000;
         display: flex;
         padding: 1rem 8rem !important;
         justify-content: space-between;

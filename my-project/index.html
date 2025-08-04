@@ -12,7 +12,9 @@
     <!-- LOGO AND NAVBAR -->
     <header role="banner">
       <img id="header-logo" src="assets/images/logo-dark.svg" alt="Digitalbank Logo" />
-      <img id="hamburger-icon" src="assets/images/icon-hamburger.svg" alt="Menu" />
+      <button id="hamburger-icon"><img  src="assets/images/icon-hamburger.svg" alt="Menu-open" /></button>
+      <button id="close-icon"><img  src="assets/images/icon-close.svg" alt="Menu-close" /></button>
+
       <nav id="header-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#">Home</a></li>
@@ -25,6 +27,17 @@
       <button class="request-invite-button" id="request-invite-top">Request Invite</button>
     </header>
 
+    <div id="small-screen-overlay"></div>
+
+    <nav id="small-screen-menu" >
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </nav>
 
     <main role="main">
       <img id="image-mockups-desktop" src="assets/images/image-mockups.png" alt="Mockups of Digitalbank mobile app" />
@@ -47,7 +60,6 @@
           </p>
           <button class="request-invite-button" id="request-invite-button-hero-small-screen">Request Invite</button>
         </div>
-
       </section>
       
       <!-- FEATURES -->
@@ -55,7 +67,7 @@
         <div id="features-first-row" >
           <h2 id="features-header">Why choose Digitalbank?</h2>
           <p id="features-header-paragraph" >We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
-          </div>
+        </div>
 
         <section id="features" >
           <div id="online-banking" >
