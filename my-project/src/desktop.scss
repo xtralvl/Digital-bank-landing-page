@@ -31,6 +31,9 @@
 
     .request-invite-button {
         @include request-invite-button-styles;
+        &:hover {
+            opacity: 0.7;
+        }
       }
       
 
@@ -74,6 +77,10 @@
                 a {
                     color: hsl(233, 8%, 62%);
                     text-decoration: none;
+
+                    &:hover {
+                        color: black;
+                    }
 
                 }
             }
@@ -292,6 +299,14 @@
             display: flex;
             flex-direction: column;
             height: auto; // let it grow naturally
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.9;
+                .article-subheader {
+                    color: hsl(136, 64%, 51%);
+                }
+            }
         }
         
         #article-header {
@@ -332,6 +347,8 @@
             font-weight: lighter;
             color: hsl(233, 26%, 24%);
             line-height: 120%;
+            cursor: pointer;
+
         }
 
         .article-paragraph {
@@ -340,6 +357,7 @@
             padding: 0 1.5rem;
             color: hsl(233, 8%, 62%);
             padding-bottom: 0;
+
         }
     }
 
@@ -352,6 +370,8 @@
             grid-template-rows: 1fr;
             background-color: hsl(233, 26%, 24%);
             text-align: center;
+
+            
 
 
             #footer-col-1 {
@@ -402,6 +422,7 @@
                 color: white;
                 list-style: none;
                 grid-column: 2 / 4;
+
             }
             
 
