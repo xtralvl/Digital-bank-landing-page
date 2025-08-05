@@ -46,7 +46,29 @@
         #hamburger-icon {
             width: 1.5rem;
             height: 0.6875rem;
+            border: none;
+            background-color: rgb(255, 255, 255, 0);
         }
+
+        .hide {
+            display: none !important;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+
+        #close-icon {
+            padding: 0;
+            margin-right: -.15rem;
+            margin-top: -.15rem;
+            display: none;
+            height: 0.6875rem;
+            border: none;
+            background-color: rgb(255, 255, 255, 0);
+        }
+
 
         #header-logo {
             width: 9.5625rem;
@@ -58,11 +80,15 @@
     }
 
     #small-screen-overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
+      
       
         // gradient: dark at top, transparent at bottom
         background: linear-gradient(
@@ -76,23 +102,37 @@
         z-index: 2000; // below the menu
         pointer-events: auto; // so it can be clicked to close the menu
       }
+
+      #small-screen-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
             
 
     #small-screen-menu {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        padding: 2rem 0 1rem 0;
+        // ^ starts above the screen but centered horizontally
+      
+        transition: transform 0.4s ease-out, opacity 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
+      
+        // size & layout
+        height: auto; // or a fixed height like 60vh
+        width: 90vw;
+        max-width: 90vw;
+        background-color: white;
+        position: fixed;
+        z-index: 3000;
+        border-radius: 8px;
+      
         display: flex;
         align-items: center;
         justify-content: center;
-        position: fixed;
-        top: 36%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 48vh;
-        width: 90vw;         // 90% of viewport width
-        max-width: 90vw;    // never wider than this
-        box-sizing: border-box;
-        background-color: white;
-        z-index: 3000;
-        border-radius: 4px; 
 
         ul {
             display: flex;
@@ -101,8 +141,9 @@
             align-items: center;
             padding: 0;
             margin: 0;
+
             li {
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
                 line-height: 115%;
                 font-family: 'Public Sans', sans-serif;
                 font-size: 16px;
@@ -124,6 +165,13 @@
 
         }
       }
+
+      #small-screen-menu.active {
+        transform: translate(-50%, 50%);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
           
 
 
