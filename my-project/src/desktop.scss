@@ -308,7 +308,7 @@
 
             &:hover {
                 cursor: pointer;
-                opacity: 0.9;
+                opacity: 0.8;
                 .article-subheader {
                     color: hsl(136, 64%, 51%);
                 }
@@ -404,38 +404,34 @@
               
                   img {
                     width: 1.3rem;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
                   }
                 }
               }
         }
 
 
-          #footer-nav {
 
             ul {
-                padding: 0;
-                grid-column: 2 / 4;
-                
-                
-            }
-
-            li {
-                margin: 0;
-                padding: 0;
-                line-height: 115%;
-                font-family: 'Public Sans', sans-serif;
-                font-size: 0.875rem;
-                color: white;
                 list-style: none;
-                grid-column: 2 / 4;
-
-            }
-            
-
-            #request-invite-bottom {
-                margin: 0;
                 padding: 0;
-            }
+                margin: 0;
+            
+                li {
+                  margin: 0.5rem 0;
+            
+                  a {
+                    color: white;
+                    text-decoration: none;
+            
+                    &:hover {
+                      color: hsl(136, 64%, 51%);
+                    }
+                  }
+                }
 
           }
 
